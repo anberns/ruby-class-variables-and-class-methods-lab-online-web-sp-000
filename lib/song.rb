@@ -7,9 +7,9 @@ class Song
     @artist = artist
     @genre = genre
     @@count += 1
-    if !@@genre.include?(genre)
-      @@genre << genre
-    end
+    @@genre << genre
+    @@artists << artist
+    
   end
   
   @@count = 0 
@@ -20,6 +20,25 @@ class Song
     @@count
   end
   
+  def self.genres
+    genres = []
+    @@genre.each do |genre|
+      if !genres.include?(genre)
+        genres << genre 
+      end
+    end
+    genres
+  end
+  
+  def self.genres
+    genres = []
+    @@genre.each do |genre|
+      if !genres.include?(genre)
+        genres << genre 
+      end
+    end
+    genres
+  end
   
     
   

@@ -22,7 +22,7 @@ class Song
   
   def self.genres
     genres = []
-    @@genre.each do |genre|
+    @@genres.each do |genre|
       if !genres.include?(genre)
         genres << genre 
       end
